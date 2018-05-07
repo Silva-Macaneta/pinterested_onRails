@@ -32,9 +32,7 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 
 gem 'bootswatch-rails'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 3.0'
-# Use ActiveModel has_secure_password
+
 gem 'bcrypt', platforms: :ruby
 
 gem 'rmagick'
@@ -48,6 +46,8 @@ gem 'masonry-rails'
 gem 'will_paginate', '~> 3.0.7'
 
 gem 'will_paginate-bootstrap', '~> 1.0.1'
+
+gem 'acts_as_votable', '~> 0.11.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
