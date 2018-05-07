@@ -2,7 +2,4 @@
   "name": "pinterested",
   "private": true,
   "dependencies": {},
-  "engines": { 
-   "node": "8.7.0" 
-  }
 }
