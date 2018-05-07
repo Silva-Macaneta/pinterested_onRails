@@ -24,3 +24,8 @@ production:
   <<: *default
   adapter: postgresql
   database: db/production.sqlite3
+
+heroku:
+  <<: *default
+  adapter: postgresql
+  database: db/production.sqlite3
