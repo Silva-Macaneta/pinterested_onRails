@@ -1,10 +1,8 @@
-<p id="notice"><%= notice %></p>
-
 <div class="row">
    <div class="col-md-offset-2 col-md-8">
     
      <div class="panel panel-default">
-       <div class="panel-heading center"><%= image_tag @pin.image.url(:medium) %><div>
+       <%= image_tag @pin.image.url() %>
        <div class="panel-body">
           
            <%= @pin.description %><br/>
@@ -15,9 +13,20 @@
            <%= link_to 'Edit', edit_pin_path(@pin) %> |
          <% end %>
          <%= link_to 'Back', pins_path %>
-         <div>
-     <div>
-   <div>
- <div>
- <div>
- 	
+         </div>
+        </div>
+     </div>
+     
+     <div class="col-md-offset-2 col-md-8">
+            <h2><strong><%= @pin.comments.count %></strong> Comments</h2>
+            <%= render @pin.comments %>
+            <% if user_signed_in? %>
+                <div class="comment-form">
+                   <hr/>
+                   <h3>Leave a reply</h3>
+                   <%= render 'comments/form', locals: {pin: @pin} %>
+                 </div>
+            <% end %>
+     </div>
+ </div>
+ 

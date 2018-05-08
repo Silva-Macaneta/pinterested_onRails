@@ -1,0 +1,9 @@
+<div class="well">
+    <strong><%= comment.user.name %> :</strong><%= comment.comment %>
+    
+    <% if comment.user == current_user %>
+        <div class="pull-right"><%= link_to 'delete', [ comment.pin , comment ], method: :delete, class: "btn btn-danger", data: { confirm: "Are you sure?"} %>
+    </div>
+    <% end %>
+    
+</div>
